@@ -1,0 +1,81 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# Ignore all env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# TypeScript compiled output
+*.js
+*.d.ts
+*.js.map
+
+# Jest coverage
+coverage/
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Yarn
+.yarn/
+.yarnrc.yml
+
+# Specific directories for each service
+task-api/node_modules/
+task-api/dist/
+
+scheduler/node_modules/
+scheduler/dist/
+
+worker/node_modules/
+worker/dist/
+
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+
+metrics/node_modules/
+metrics/dist/
+
+# Ignore npm and lock files for each service
+task-api/package-lock.json
+scheduler/package-lock.json
+worker/package-lock.json
+frontend/package-lock.json
+metrics/package-lock.json
+
+# Ignore Docker build artifacts
+task-api/*.dockerfile
+scheduler/*.dockerfile
+worker/*.dockerfile
+frontend/*.dockerfile
+metrics/*.dockerfile
+
+# Ignore TypeScript cache
+*.tsbuildinfo
+

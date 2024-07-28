@@ -1,0 +1,49 @@
+services:
+  task-api:
+    image: task-api:latest
+    build:
+      context: ./task-api
+    ports:
+      - "3000:3000"
+    networks:
+      - task-network
+
+  scheduler:
+    image: scheduler:latest
+    build:
+      context: ./scheduler
+    ports:
+      - "3001:3001"
+    networks:
+      - task-network
+
+  worker:
+    image: worker:latest
+    build:
+      context: ./worker
+    ports:
+      - "3002:3002"
+    networks:
+      - task-network
+
+  frontend:
+    image: frontend:latest
+    build:
+      context: ./frontend
+    ports:
+      - "8080:3000"
+    networks:
+      - task-network
+
+  metrics:
+    image: metrics:latest
+    build:
+      context: ./metrics
+    ports:
+      - "3003:3003"
+    networks:
+      - task-network
+
+networks:
+  task-network:
+    driver: bridge
