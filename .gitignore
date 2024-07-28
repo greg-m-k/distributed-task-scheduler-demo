@@ -29,8 +29,7 @@ Thumbs.db
 .env.test.local
 .env.production.local
 
-# TypeScript compiled output
-*.js
+# TypeScript compiled output 
 *.d.ts
 *.js.map
 
